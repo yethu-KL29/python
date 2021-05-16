@@ -1,0 +1,198 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mini Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <style>
+   *{
+padding:0;
+margin:0;
+text-decoration:none;
+list-style:none;
+box-sizing:border-box;
+}
+body{
+ font-family: montserrat;
+  height:100%;
+  margin:0;
+  padding:0;
+  background:#f1f1f1;
+}
+nav{
+background: #0082e6;
+width:100%;
+height:80px;
+}
+label.logo{
+  font-size:35px;
+  color:white;
+  line-height:80px;
+  font-weight:bold;
+  padding:0 100px;
+  
+}
+nav ul{
+  float:right;
+  margin-right:20px;
+}
+nav ul li{
+  display:inline-block;
+  line-height:80px;
+  margin:0 5px;
+}
+nav ul li a{
+color:white;
+font-size:17px;
+padding:7px 13px;
+border-radius:3px;
+text-transform:uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.bgi{
+position:relative;
+ overflow:hidden;
+  height:500px;
+  background:url("https://i.pinimg.com/originals/cf/41/3e/cf413e4a7bd6b503ce7828fb6f7b7338.jpg")no-repeat center;
+  background-size:cover;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+canvas{
+  width:200px;
+  height:200px;
+  background-color:white;
+  
+}
+.upload{
+position:absolute;
+top:50%;
+left:50%;
+  transform:translate(-50%,-50%);
+  overflow:hidden;
+  text-align:center;
+  color:white;
+  font-weight:500;
+  text-transform:uppercase;
+  
+}
+.file{
+color:#313131;
+padding:10px 24px;
+font-size:20px;
+text decoration:none;
+border-radius:8px;
+  background:#f1f1f1;
+  
+}
+.submit{
+  position:absolute;
+  
+top:70%;
+left:50%;
+  transform:translate(-60%,-60%);
+  overflow:hidden;
+  text-align:center;
+  color:white;
+  font-weight:500;
+  text-transform:uppercase;
+}
+.btn{
+  color:#313131;
+padding:10px 24px;
+font-size:20px;
+text decoration:none;
+border-radius:8px;
+  background:#f1f1f1;
+ 
+}
+
+  </style>
+</head>
+
+<body>
+  <nav><div class="bgi">
+     <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+    <label class="logo">M_Society</label>
+    <ul>
+    <li><a href=""class="active">Home</a></li>
+   
+    
+    <li><a href="#">Feedback</a></li>
+      </nav>
+     
+    <form method="post" enctype="multipart/form-data">
+ <div class="upload">
+   <h1>Select the mp3 to upload</h1>
+   <input type="file" class="file" name="file" multiple>
+ </div>
+ <div class="submit">
+   <button class="btn">Submit</button>
+ </div>
+</form>
+    </div>
+      
+   
+    
+    
+</body>
